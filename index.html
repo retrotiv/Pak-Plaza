@@ -1,68 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pak-Plaza — paks for every handheld</title>
-<meta name="description" content="A catalog of paks for NextUI-based handhelds: Anbernic RG353V, TrimUI Brick and more.">
+<title>Pak-Plaza</title>
+<meta name="description" content="A store of paks for NextUI-based handhelds: Anbernic RG353V, TrimUI Brick and more.">
 <style>
   :root{
-    --bg:#0b0b0f; --panel:#15151b; --panel2:#1c1c24; --line:#2a2a34;
-    --ink:#f4f4f6; --muted:#9a9aa6; --amber:#ffab2e; --cyan:#5ad1c7;
-    --accent:#ffab2e;
+    --bg:#0c0d12; --bg2:#101219; --card:#161926; --card2:#1d2130; --line:#272b3a;
+    --ink:#f3f4f8; --muted:#9aa0b4; --amber:#ffab2e; --amber-ink:#140d02;
+    --shadow:0 10px 30px rgba(0,0,0,.45); --radius:16px;
+  }
+  :root[data-theme="light"]{
+    --bg:#f3efe7; --bg2:#fbf9f4; --card:#ffffff; --card2:#f6f2ea; --line:#e4ddcf;
+    --ink:#201b12; --muted:#7a7360; --amber:#e8891a; --amber-ink:#fff6e9;
+    --shadow:0 10px 26px rgba(120,100,60,.16);
   }
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
-  header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:8px 0 20px}
-  header img{width:min(440px,86vw);height:auto}
-  header p{color:var(--muted);margin:0;max-width:640px}
-  .controls{position:sticky;top:0;background:linear-gradient(var(--bg) 70%,transparent);padding:14px 0;z-index:5}
-  .devices{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-  .tab{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer;font-size:14px;font-weight:600;transition:.15s}
-  .tab[aria-selected="true"]{border-color:var(--accent);color:#0b0b0f;background:var(--accent)}
-  .row2{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:12px}
-  .search{flex:1;min-width:200px;max-width:420px;background:var(--panel);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:10px 12px;font-size:14px}
-  .search:focus{outline:none;border-color:var(--accent)}
-  .cats{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
-  .chip{border:1px solid var(--line);background:transparent;color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:12.5px}
-  .chip[aria-selected="true"]{border-color:var(--accent);color:var(--accent)}
-  .count{text-align:center;color:var(--muted);font-size:13px;margin:16px 0 6px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:9px}
-  .card:hover{border-color:var(--accent)}
-  .ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-  .cname{font-size:17px;font-weight:700;margin:0}
-  .cat{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 7px;white-space:nowrap}
-  .desc{color:#cfcfd6;font-size:13.5px;margin:0;min-height:38px}
-  .badge{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:3px 8px}
-  .b-adapted{background:rgba(255,171,46,.14);color:var(--amber);border:1px solid rgba(255,171,46,.4)}
-  .b-original{background:rgba(90,209,199,.12);color:var(--cyan);border:1px solid rgba(90,209,199,.4)}
-  .cfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px;padding-top:10px;border-top:1px solid var(--line)}
-  .by{font-size:12px;color:var(--muted)}
-  .btn{font-size:12.5px;font-weight:700;border:1px solid var(--accent);color:var(--accent);border-radius:8px;padding:7px 12px;white-space:nowrap}
-  .btn:hover{background:var(--accent);color:#0b0b0f;text-decoration:none}
-  footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:40px;line-height:1.7}
-  .empty{text-align:center;color:var(--muted);padding:40px 0}
+  body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.45}
+  a{color:var(--amber);text-decoration:none}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 16px 72px}
+
+  /* top bar */
+  .top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);
+       display:flex;align-items:center;gap:12px;padding:12px 16px;margin:0 -16px 0}
+  .top img{height:40px;width:auto}
+  .top .grow{flex:1}
+  .iconbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:10px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .iconbtn:hover{border-color:var(--amber)}
+
+  /* hero */
+  .hero{margin:18px 0 10px;border-radius:var(--radius);overflow:hidden;position:relative;
+        background:linear-gradient(120deg,#20140a,#0c0d12 70%);border:1px solid var(--line);box-shadow:var(--shadow)}
+  :root[data-theme="light"] .hero{background:linear-gradient(120deg,#ffe9c9,#fbf9f4 70%)}
+  .hero .pad{padding:22px 22px}
+  .hero h1{margin:.1em 0 .2em;font-size:22px}
+  .hero p{margin:0;color:var(--muted);max-width:620px;font-size:14px}
+  .hero .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--amber-ink);background:var(--amber);border-radius:6px;padding:3px 9px;margin-bottom:6px;text-transform:uppercase}
+
+  /* controls */
+  .controls{position:sticky;top:65px;z-index:10;background:var(--bg);padding:12px 0 8px}
+  .seg{display:inline-flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .seg button{border:0;background:transparent;color:var(--muted);padding:7px 14px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:700}
+  .seg button[aria-selected="true"]{background:var(--amber);color:var(--amber-ink)}
+  .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:12px}
+  .tabs{display:flex;gap:6px}
+  .tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:700}
+  .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .search{background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:9px 12px;font-size:14px;min-width:170px;flex:1;max-width:280px}
+  .search:focus{outline:none;border-color:var(--amber)}
+  .cats{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .chip{border:1px solid var(--line);background:transparent;color:var(--muted);padding:6px 11px;border-radius:999px;cursor:pointer;font-size:12px}
+  .chip[aria-selected="true"]{border-color:var(--amber);color:var(--amber)}
+
+  .count{color:var(--muted);font-size:12.5px;margin:16px 2px 8px}
+
+  /* shelf grid of box-art tiles */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .12s,border-color .12s}
+  .tile:hover{transform:translateY(-3px);border-color:var(--amber)}
+  .cover{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative}
+  .cover .mono{font-size:54px;font-weight:800;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  .cover .ctag{position:absolute;left:8px;top:8px;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.28);border-radius:5px;padding:2px 7px;letter-spacing:.3px}
+  .cover .excl{position:absolute;right:8px;top:8px;font-size:10px;font-weight:800;color:var(--amber-ink);background:var(--amber);border-radius:5px;padding:2px 7px}
+  .meta{padding:10px 11px 12px;display:flex;flex-direction:column;gap:3px;flex:1}
+  .tname{font-size:14.5px;font-weight:700;margin:0;line-height:1.2}
+  .tby{font-size:11.5px;color:var(--muted)}
+  .tdesc{font-size:12px;color:var(--muted);margin:2px 0 0;flex:1}
+  .tget{margin-top:9px;text-align:center;font-size:12.5px;font-weight:800;border:1px solid var(--amber);color:var(--amber);border-radius:8px;padding:7px}
+  .tget:hover{background:var(--amber);color:var(--amber-ink)}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+
+  footer{color:var(--muted);font-size:12.5px;margin-top:36px;line-height:1.7;text-align:center}
+
+  /* preferences modal */
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:40;padding:16px}
+  .scrim.open{display:flex}
+  .modal{background:var(--card);border:1px solid var(--line);border-radius:16px;max-width:360px;width:100%;padding:20px;box-shadow:var(--shadow)}
+  .modal h2{margin:0 0 4px;font-size:18px}
+  .modal p{margin:0 0 16px;color:var(--muted);font-size:13px}
+  .pref{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .toggle button{border:0;background:transparent;color:var(--muted);padding:7px 14px;cursor:pointer;font-size:13px;font-weight:700}
+  .toggle button[aria-selected="true"]{background:var(--amber);color:var(--amber-ink)}
+  .modal .done{margin-top:16px;width:100%;border:0;background:var(--ink);color:var(--bg);border-radius:10px;padding:10px;font-weight:800;cursor:pointer}
 </style>
 </head>
 <body>
+<header class="top">
+  <img src="assets/logo.svg" alt="Pak-Plaza">
+  <div class="grow"></div>
+  <button class="iconbtn" id="prefsBtn" title="Preferences" aria-label="Preferences">⚙</button>
+</header>
+
 <div class="wrap">
-  <header>
-    <img src="assets/logo.svg" alt="Pak-Plaza">
-    <p>A catalog of paks for NextUI-based handhelds. Pick your device — RG353V builds are
-       adapted for the Anbernic; every pak credits its original author.</p>
-  </header>
+  <section class="hero"><div class="pad">
+    <span class="tag" id="heroTag">Pak-Plaza</span>
+    <h1 id="heroTitle">Paks for every handheld</h1>
+    <p id="heroDesc">Pick your device, then browse the Pak Store or the Pak-Plaza exclusives.</p>
+  </div></section>
 
   <div class="controls">
-    <div class="devices" id="devices" role="tablist"></div>
-    <div class="row2">
+    <div class="seg" id="devices" role="tablist"></div>
+    <div class="bar">
+      <div class="tabs" id="sections"></div>
       <input class="search" id="search" type="search" placeholder="Search paks…" aria-label="Search paks">
-      <div class="cats" id="cats"></div>
     </div>
+    <div class="cats" id="cats"></div>
   </div>
 
   <div class="count" id="count"></div>
@@ -71,70 +116,104 @@
   <footer id="footer"></footer>
 </div>
 
-<script>
-const state = { device:null, cat:"All", q:"", data:null };
+<div class="scrim" id="scrim">
+  <div class="modal">
+    <h2>Preferences</h2>
+    <p>Pak-Plaza remembers these on this device.</p>
+    <div class="pref">
+      <span>Theme</span>
+      <div class="toggle" id="themeToggle">
+        <button data-theme-val="dark">Dark</button>
+        <button data-theme-val="light">Light</button>
+      </div>
+    </div>
+    <button class="done" id="prefsDone">Done</button>
+  </div>
+</div>
 
-function escapeHtml(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+<script>
+const CAT_COLOR = {Customize:"#8b7cf0",Media:"#ef6ea0",Scrapers:"#39bfb0",Network:"#4f97ee",Files:"#f0a93a",System:"#8a90a0"};
+const state = { device:null, section:null, cat:"All", q:"", data:null };
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+// theme
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  document.querySelectorAll('#themeToggle button').forEach(b=>b.setAttribute('aria-selected', b.dataset.themeVal===t));
+}
+let theme='dark';
+try{ theme = localStorage.getItem('pp-theme') || 'dark'; }catch(e){}
+applyTheme(theme);
 
 function render(){
-  const d = state.data; if(!d) return;
-  const dev = d.devices.find(x=>x.id===state.device) || d.devices[0];
-  document.documentElement.style.setProperty('--accent', dev.accent || '#ffab2e');
+  const d=state.data; if(!d) return;
+  const dev=d.devices.find(x=>x.id===state.device)||d.devices[0];
+  const sec=d.sections.find(x=>x.id===state.section)||d.sections[0];
 
-  // device tabs
   document.getElementById('devices').innerHTML = d.devices.map(x=>
-    `<button class="tab" role="tab" aria-selected="${x.id===state.device}" data-dev="${x.id}">${escapeHtml(x.name)}</button>`).join('');
-
-  // category chips
-  const cats = ["All", ...d.categories];
+    `<button role="tab" aria-selected="${x.id===state.device}" data-dev="${x.id}">${esc(x.name)}</button>`).join('');
+  document.getElementById('sections').innerHTML = d.sections.map(x=>
+    `<button class="tab" aria-selected="${x.id===state.section}" data-sec="${x.id}">${esc(x.name)}</button>`).join('');
+  const cats=["All",...d.categories];
   document.getElementById('cats').innerHTML = cats.map(c=>
-    `<button class="chip" aria-selected="${c===state.cat}" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('');
+    `<button class="chip" aria-selected="${c===state.cat}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
 
-  // filter
-  const q = state.q.trim().toLowerCase();
-  const items = d.paks.filter(p=>{
+  document.getElementById('heroTag').textContent = sec.name;
+  document.getElementById('heroTitle').textContent = sec.id==='alternative' ? 'Pak-Plaza exclusives' : 'The Pak Store, on '+dev.name;
+  document.getElementById('heroDesc').textContent = sec.desc;
+
+  const q=state.q.trim().toLowerCase();
+  const items=d.paks.filter(p=>{
+    if((p.store||'pakstore')!==state.section) return false;
     if(!p.availability || !p.availability[state.device]) return false;
     if(state.cat!=="All" && p.category!==state.cat) return false;
-    if(q && !(p.name.toLowerCase().includes(q) || (p.desc||"").toLowerCase().includes(q) || (p.author||"").toLowerCase().includes(q))) return false;
+    if(q && !(p.name.toLowerCase().includes(q)||(p.desc||'').toLowerCase().includes(q)||(p.author||'').toLowerCase().includes(q))) return false;
     return true;
   });
 
-  document.getElementById('count').textContent =
-    `${items.length} pak${items.length===1?'':'s'} for ${dev.name}`;
+  document.getElementById('count').textContent = `${items.length} pak${items.length===1?'':'s'} · ${dev.name}`;
 
   document.getElementById('grid').innerHTML = items.length ? items.map(p=>{
-    const kind = p.availability[state.device]; // "adapted" | "original"
-    const badge = kind==="adapted"
-      ? `<span class="badge b-adapted">RG353V-adapted</span>`
-      : `<span class="badge b-original">original build</span>`;
-    const by = p.author ? `Original by ${escapeHtml(p.author)}` : "";
-    const link = p.source ? `<a class="btn" href="${escapeHtml(p.source)}" target="_blank" rel="noopener">View source ↗</a>` : "";
-    return `<div class="card">
-      <div class="ctop"><h3 class="cname">${escapeHtml(p.name)}</h3><span class="cat">${escapeHtml(p.category)}</span></div>
-      ${badge}
-      <p class="desc">${escapeHtml(p.desc||"")}</p>
-      <div class="cfoot"><span class="by">${by}</span>${link}</div>
+    const col=CAT_COLOR[p.category]||'#8a90a0';
+    const mono=esc(p.name.trim()[0]||'?');
+    const kind=p.availability[state.device];
+    const excl=p.store==='alternative'?`<span class="excl">EXCLUSIVE</span>`:'';
+    const badge=kind==='adapted'?'RG353V-adapted':'original build';
+    const btn=p.source?`<a class="tget" href="${esc(p.source)}" target="_blank" rel="noopener">View source ↗</a>`:'';
+    return `<div class="tile">
+      <div class="cover" style="background:linear-gradient(145deg,${col},${col}99)">
+        <span class="ctag">${esc(p.category)}</span>${excl}
+        <span class="mono">${mono}</span>
+      </div>
+      <div class="meta">
+        <h3 class="tname">${esc(p.name)}</h3>
+        <span class="tby">${p.author?('by '+esc(p.author)):''} · ${badge}</span>
+        <p class="tdesc">${esc(p.desc||'')}</p>
+        ${btn}
+      </div>
     </div>`;
-  }).join('') : `<div class="empty">No paks listed for this device yet.</div>`;
+  }).join('') : `<div class="empty">Nothing here for this device yet.</div>`;
 }
 
-document.addEventListener('click', e=>{
-  const t = e.target.closest('[data-dev]'); if(t){ state.device=t.dataset.dev; render(); return; }
-  const c = e.target.closest('[data-cat]'); if(c){ state.cat=c.dataset.cat; render(); return; }
+document.addEventListener('click',e=>{
+  const dv=e.target.closest('[data-dev]'); if(dv){state.device=dv.dataset.dev;render();return;}
+  const sc=e.target.closest('[data-sec]'); if(sc){state.section=sc.dataset.sec;state.cat="All";render();return;}
+  const ct=e.target.closest('[data-cat]'); if(ct){state.cat=ct.dataset.cat;render();return;}
+  const tv=e.target.closest('[data-theme-val]'); if(tv){const t=tv.dataset.themeVal;applyTheme(t);try{localStorage.setItem('pp-theme',t);}catch(e){}return;}
 });
-document.getElementById('search').addEventListener('input', e=>{ state.q=e.target.value; render(); });
+document.getElementById('search').addEventListener('input',e=>{state.q=e.target.value;render();});
+document.getElementById('prefsBtn').addEventListener('click',()=>document.getElementById('scrim').classList.add('open'));
+document.getElementById('prefsDone').addEventListener('click',()=>document.getElementById('scrim').classList.remove('open'));
+document.getElementById('scrim').addEventListener('click',e=>{if(e.target.id==='scrim')e.target.classList.remove('open');});
 
 fetch('paks.json').then(r=>r.json()).then(d=>{
-  state.data=d; state.device=d.devices[0].id;
+  state.data=d; state.device=d.devices[0].id; state.section=d.sections[0].id;
   document.getElementById('footer').innerHTML =
-    `Catalog updated ${escapeHtml(d.updated||"")}. Paks are built by the NextUI community; `+
-    `RG353V versions are adapted by retrotiv. See <a href="CREDITS.md">credits</a> and the `+
-    `<a href="https://github.com/retrotiv/Pak-Plaza">repository</a>.`;
+    `Catalog updated ${esc(d.updated||'')}. Paks are built by the NextUI community; RG353V versions are adapted by retrotiv. `+
+    `See <a href="CREDITS.md">credits</a> and the <a href="https://github.com/retrotiv/Pak-Plaza">repository</a>.`;
   render();
-}).catch(()=>{
-  document.getElementById('grid').innerHTML =
-    `<div class="empty">Could not load the catalog (paks.json). Open this page from GitHub Pages or a local server.</div>`;
-});
+}).catch(()=>{document.getElementById('grid').innerHTML='<div class="empty">Could not load the catalog. Open this page from the live site.</div>';});
 </script>
 </body>
 </html>
