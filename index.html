@@ -73,6 +73,8 @@
   .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
 
   footer{color:var(--muted);font-size:12.5px;margin-top:36px;line-height:1.7;text-align:center}
+  .kofi{display:inline-block;background:var(--amber);color:var(--amber-ink);font-weight:800;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13.5px;margin-bottom:16px}
+  .kofi:hover{filter:brightness(1.06);text-decoration:none}
 
   /* preferences modal */
   .scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:40;padding:16px}
@@ -210,6 +212,7 @@ document.getElementById('scrim').addEventListener('click',e=>{if(e.target.id==='
 fetch('paks.json').then(r=>r.json()).then(d=>{
   state.data=d; state.device=d.devices[0].id; state.section=d.sections[0].id;
   document.getElementById('footer').innerHTML =
+    `<a class="kofi" href="https://ko-fi.com/retrotiv" target="_blank" rel="noopener">&#9749; Support retrotiv on Ko-fi</a><br>`+
     `Catalog updated ${esc(d.updated||'')}. Paks are built by the NextUI community; RG353V versions are adapted by retrotiv. `+
     `See <a href="CREDITS.md">credits</a> and the <a href="https://github.com/retrotiv/Pak-Plaza">repository</a>.`;
   render();
