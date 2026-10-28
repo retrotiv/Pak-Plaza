@@ -1,0 +1,34 @@
+{
+  "updated": "2026-10-28",
+  "note": "Catalog of paks for NextUI-based handhelds. RG353V builds are adapted by retrotiv; TrimUI Brick entries are the upstream community builds. Original authors are credited on every card.",
+  "devices": [
+    { "id": "rg353v", "name": "Anbernic RG353V", "accent": "#ffab2e" },
+    { "id": "brick",  "name": "TrimUI Brick",     "accent": "#5ad1c7" },
+    { "id": "miyoo",  "name": "Miyoo Mini",        "accent": "#9a8cff" }
+  ],
+  "categories": ["Customize", "Media", "Scrapers", "Network", "Files", "System"],
+  "paks": [
+    { "name": "Pak Store", "category": "System", "desc": "The on-device app store itself — browse and install paks by category.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Game Manager", "category": "Scrapers", "desc": "Rename, archive and delete ROMs, and download box art from the Libretro thumbnails project.", "author": "UncleJunVIP", "source": "https://github.com/UncleJunVIP/nextui-game-manager", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Artwork Scraper", "category": "Scrapers", "desc": "Fetch box art and media for your library.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "ScrapeGoat", "category": "Scrapers", "desc": "Alternative artwork and metadata scraper.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Boombrick", "category": "Media", "desc": "Music player for your handheld.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "ClassicPod", "category": "Media", "desc": "iPod-style music player.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Syncthing", "category": "Network", "desc": "Continuously sync saves and files between devices over your network.", "author": "Syncthing project (packaged for NextUI)", "source": "https://syncthing.net", "availability": { "rg353v": "adapted", "brick": "original", "miyoo": "original" } },
+    { "name": "FTP Server", "category": "Network", "desc": "Serve the SD card over FTP to copy files from a PC.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "HTTP Filebrowser", "category": "Network", "desc": "Manage the SD card from your browser over the network.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Files", "category": "Files", "desc": "On-device file manager.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original", "miyoo": "original" } },
+    { "name": "Disc Organizer", "category": "Files", "desc": "Tidy up multi-disc games into a clean structure.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "M3U Manager", "category": "Files", "desc": "Build .m3u playlists so multi-disc games show as one entry.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Rom Inspector", "category": "Files", "desc": "Inspect and clean up your ROM sets.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Cheat Downloader Offline", "category": "Files", "desc": "Install cheat files for your games without a connection.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Aesthetics", "category": "Customize", "desc": "Change the look of the interface.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Wallpaper Studio", "category": "Customize", "desc": "Set and manage wallpapers.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Fontleroy", "category": "Customize", "desc": "Swap the interface font.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Overlays", "category": "Customize", "desc": "Apply screen overlays and bezels.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Clock", "category": "System", "desc": "Clock and time display.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Battery", "category": "System", "desc": "Battery status and monitoring.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "Game Tracker", "category": "System", "desc": "Track how long you play each game.", "author": "NextUI Pak Store & contributors", "source": "https://nextui.loveretro.games", "availability": { "rg353v": "adapted", "brick": "original" } },
+    { "name": "AnberNext Update", "category": "System", "desc": "Over-the-air updater for AnberNext — pulls new versions straight to the device. Built for this project.", "author": "retrotiv", "source": "https://github.com/retrotiv/AnberNext", "availability": { "rg353v": "adapted" } }
+  ]
+}
