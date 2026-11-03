@@ -1,0 +1,17 @@
+{
+  "name": "Pak-Plaza",
+  "paks": [
+    {
+      "id": "anbertunes",
+      "name": "AnberTunes",
+      "type": "TOOL",
+      "description": "Music player with a now-playing card in games. Local music, Spotify (Premium) and YouTube Music, album art and synced lyrics, amber or album-art theme. An amber fork of Boombrick.",
+      "author": "retrotiv (fork of Boombrick by ujjwal313)",
+      "repo_url": "https://github.com/retrotiv/AnberTunes",
+      "release_filename": "AnberTunes.pak.zip",
+      "version": "v1.0.0",
+      "platforms": ["tg5040", "rg353"],
+      "categories": ["Media"]
+    }
+  ]
+}
