@@ -1,17 +1,689 @@
 {
   "name": "Pak-Plaza",
+  "url": "https://raw.githubusercontent.com/retrotiv/Pak-Plaza/main/storefront.json",
   "paks": [
     {
       "id": "anbertunes",
+      "storefront_name": "AnberTunes",
       "name": "AnberTunes",
+      "version": "v1.0.0",
       "type": "TOOL",
-      "description": "Music player with a now-playing card in games. Local music, Spotify (Premium) and YouTube Music, album art and synced lyrics, amber or album-art theme. An amber fork of Boombrick.",
+      "description": "Your music, Spotify and YouTube Music in one player, with album art, synced lyrics and music that keeps playing while you game. An amber fork of Boombrick. Background music sets itself up on first launch (hold L1+R1, then A).",
       "author": "retrotiv (fork of Boombrick by ujjwal313)",
       "repo_url": "https://github.com/retrotiv/AnberTunes",
+      "previous_repo_urls": null,
       "release_filename": "AnberTunes.pak.zip",
-      "version": "v1.0.0",
-      "platforms": ["tg5040", "my355", "rg353"],
-      "categories": ["Media"]
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [],
+      "platforms": [
+        "tg5040",
+        "my355",
+        "rg353"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "pY6kD4xS9q",
+      "storefront_name": "Game Manager",
+      "name": "Game Manager",
+      "version": "v2.9.0",
+      "type": "TOOL",
+      "description": "A one-stop pak for all your game management needs.",
+      "author": "K-Wall & redria7",
+      "repo_url": "https://github.com/BrandonKowalski/nextui-game-manager",
+      "previous_repo_urls": null,
+      "release_filename": "Game.Manager.pak.zip",
+      "changelog": {
+        "v2.0.0": "Huge UI refresh along with long requested bugfixes.",
+        "v2.0.1": "Small fix in UI library for artifacts that appeared when no bg.png is present.",
+        "v2.1.0": "Enhanced archiving features courtesy of redria7!",
+        "v2.1.1": "Bugfixes",
+        "v2.2.0": "Nice little update for y'all. Added art images to the games list, added a global action menu for downloading all missing art and now art can be found for nested folders. Also three bugfixes; bulk adding games to collections should be more reliable, redria7 added a robust system for keeping track of the last selected list item and toastd figured out why art could not be found for some games.",
+        "v2.2.2": "Archiving / Unarchiving Multi Disk and BIN/CUE games now works as intended. Nested folders now work with the Global Actions Missing Art tool. Shoved Global Actions into a Tool Menu for future Pak expansion.",
+        "v2.3.0": "Enhanced art searching that uses a fallback Jaccard Similarity with configurable threshold when art with an exact filename match does not exist.",
+        "v2.4.1": "Added clear recently played to the global actions tool. Thanks madeleineostoja for the suggestion!",
+        "v2.5.0": "Added a new Play History tool allowing for viewing of all current game tracking history. Includes total hours, hours by console, hours by game, ROM location tagging, ROM collection tagging, a play summary screen, and a granular detail screen. Play summary and granular detail screens can also be accessed from game actions.",
+        "v2.6.0": "Behind the scenes collection enhancements, fix for the art downloader missing exact name matches, you can now jump pages (D-Pad Left / Right) while reordering games in a collection and new option in the collection options screen to alphabetize the games.",
+        "v2.7.0": "A new filtering option for the Play History Tool!",
+        "v2.7.1": "Updated filter screen formatting to show the full time.",
+        "v2.8.0": "Updated the system tag mappings to help find game art for more platforms.",
+        "v2.9.0": "Bump dependencies to support alpha channels in theme colors."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "lY9vJ3gK7p",
+      "storefront_name": "Artwork Scraper",
+      "name": "Artwork Scraper",
+      "version": "0.9.0",
+      "type": "TOOL",
+      "description": "Scrapes artwork from the internet",
+      "author": "josegonzalez",
+      "repo_url": "https://github.com/josegonzalez/minui-artwork-scraper-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Artwork.Scraper.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700",
+        "my355",
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "ROM Management",
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "85lpt3IHiy",
+      "storefront_name": "ScrapeGoat",
+      "name": "ScrapeGoat",
+      "version": "v2.3.0",
+      "type": "TOOL",
+      "description": "Scrape artwork and manuals from ScreenScraper.fr and download cheats from Libretro for your ROM library.",
+      "author": "Helaas",
+      "repo_url": "https://github.com/Helaas/nextui-scrapegoat-pak",
+      "previous_repo_urls": null,
+      "release_filename": "ScrapeGoat.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release: ScreenScraper.fr artwork scraping, Libretro cheat downloading.",
+        "v1.0.1": "Subfolder support for cheats and artwork, safer media downloads via temp files.",
+        "v1.0.2": "Bugfix for certain consoles being incorrectly mapped.",
+        "v2.0.0": "New Apostrophe UI with queue/progress tracking, existing-file overviews, Miyoo Flip (my355) support, and can now scrape Sega Saturn.",
+        "v2.1.0": "Adds PDF manual downloads with configurable storage, background queue handoff and resume, clearer quit behavior, smarter cheat-file selection, and daemon-safe artwork scraping.",
+        "v2.2.0": "Fixes incorrect colors with NextUI's RGBA theme format.",
+        "v2.3.0": "Adds per-folder scraping platforms and suffix defaults, with a compact System Mappings screen. Multi-system suffixes such as GPGX can map each folder independently, and unknown folders stay visible until mapped. Preserves mapping choices and queued cheat targets across updates and background handoff. Fixes COLECO scraping PlayStation 4 artwork and MSX scraping PS Vita artwork, and adds cheat databases for SG-1000 and PrBoom. Ships one ScrapeGoat.pak.zip for tg5040, tg5050, my355, and h700, with automated releases and an evidence-based suffix coverage report."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "ROM Management",
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "6N0NccoR38",
+      "storefront_name": "Boombrick",
+      "name": "Boombrick",
+      "version": "v0.4.0",
+      "type": "TOOL",
+      "description": "Your music, Spotify and YouTube Music in one player for the TrimUI Brick, with album art, synced lyrics and music that keeps playing while you game.\n\nFeatures:\n- Your music: MP3, FLAC, Opus and M4A (AAC) from the SD card, gapless, with ReplayGain levelling\n- Browse by album, artist, song or genre; the queue has shuffle and repeat and is kept between launches\n- Covers from the files, folder pictures or the Cover Art Archive, with the screen's colours taken from the album playing\n- Synced lyrics from the files, .lrc files or LRCLIB, with the line being sung highlighted\n- YouTube Music: search, browse albums and artists, and download songs as tagged Opus files with covers and lyrics; a song still downloading plays as soon as it lands\n- Spotify (Premium): sign in with a code on your phone, then play Liked Songs and your playlists at 96, 160 or 320 kbps\n- Spotify import: download your playlists' songs from YouTube Music to keep them offline, matched by ISRC or by title, artist and length\n- Play in background from the quick menu: the music goes on while you play a game\n- Sleep timer: 15 to 60 minutes, or the end of the track or album, with a fade\n- Screen off with Power, with skipping and pausing still working\n- Titles in Latin, Cyrillic, Greek and Vietnamese scripts\n- Updates for Boombrick and its downloader from Settings\n\nWi-Fi is used for Spotify, YouTube Music, covers, lyrics and updates; the music on the card plays without it. Your library and settings are kept in .userdata/tg5040/Boombrick and downloads in Music/Boombrick, so updates never touch them.",
+      "author": "ujjwal313",
+      "repo_url": "https://github.com/ujjwal313/boombrick",
+      "previous_repo_urls": null,
+      "release_filename": "Boombrick-PakStore.zip",
+      "changelog": {
+        "v0.3.2": "Plays the music on your SD card gapless, streams your Spotify playlists, downloads songs and albums from YouTube Music, finds covers and synced lyrics, and plays on in the background while you game.",
+        "v0.3.3": "Settings no longer jumps up and down when you scroll down to the Downloader card.",
+        "v0.4.0": "Boombrick now runs on Knulli as well as NextUI and CrossMix. Browse your music by genre, and shuffle all of an artist's songs with X."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        ".github/resources/screenshots/now-playing.jpg",
+        ".github/resources/screenshots/lyrics.jpg",
+        ".github/resources/screenshots/library.jpg",
+        ".github/resources/screenshots/youtube-music.jpg",
+        ".github/resources/screenshots/downloads.jpg",
+        ".github/resources/screenshots/queue.jpg"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "9lV09bLLoE",
+      "storefront_name": "ClassicPod",
+      "name": "ClassicPod",
+      "version": "v1.0.1",
+      "type": "TOOL",
+      "description": "An iPod-Classic-inspired music player for NextUI — Cover Flow, a full Now Playing screen with on-screen transport, on-device rename/delete, and a built-in WiFi file server for pushing music.",
+      "author": "thanhhaiwork1998",
+      "repo_url": "https://github.com/thanhhaiwork1998/ClassicPod",
+      "previous_repo_urls": null,
+      "release_filename": "ClassicPod.pak.zip",
+      "changelog": {
+        "v1.0.0": "Initial release: Cover Flow, Now Playing with prev/next + right-stick scrub, Songs rename/delete, on-screen volume, WiFi file server.",
+        "v1.0.1": "Fix a crash in Cover Flow when browsing large libraries: album-art loading no longer makes an unbounded allocation on a corrupt ID3 tag, and oversized covers are skipped."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Media"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "nX9mF5qB2v",
+      "storefront_name": "Syncthing",
+      "name": "Syncthing",
+      "version": "0.10.0",
+      "type": "TOOL",
+      "description": "Manages Syncthing",
+      "author": "josegonzalez",
+      "repo_url": "https://github.com/josegonzalez/minui-syncthing-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Syncthing.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700",
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xxplus",
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "yF1cQ7nW3t",
+      "storefront_name": "SFTPGO Server",
+      "name": "FTP Server",
+      "version": "0.7.0",
+      "type": "TOOL",
+      "description": "Manages the FTP Server",
+      "author": "josegonzalez",
+      "repo_url": "https://github.com/josegonzalez/minui-sftpgo-server-pak",
+      "previous_repo_urls": null,
+      "release_filename": "FTP.Server.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xxplus",
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "hJ6yL4zK9n",
+      "storefront_name": "File Browser",
+      "name": "HTTP Filebrowser",
+      "version": "0.10.0",
+      "type": "TOOL",
+      "description": "Manages the HTTP Filebrowser",
+      "author": "josegonzalez",
+      "repo_url": "https://github.com/josegonzalez/minui-filebrowser-pak",
+      "previous_repo_urls": null,
+      "release_filename": "HTTP.Filebrowser.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700",
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xxplus",
+        "tg5040",
+        "tg5050"
+      ],
+      "categories": [
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "aD4hS9nW1j",
+      "storefront_name": "M3U Manager",
+      "name": "M3U Manager",
+      "version": "0.3.0",
+      "type": "TOOL",
+      "description": "Manages M3U files",
+      "author": "josegonzalez",
+      "repo_url": "https://github.com/josegonzalez/minui-m3u-manager-pak",
+      "previous_repo_urls": null,
+      "release_filename": "M3U.Manager.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "h700",
+        "miyoomini",
+        "my282",
+        "my355",
+        "rg35xxplus",
+        "tg5040",
+        "tg5050",
+        "trimuismart"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "vN4yR7xQ2h",
+      "storefront_name": "Rom Inspector",
+      "name": "Rom Inspector",
+      "version": "V1.1.0",
+      "type": "TOOL",
+      "description": "This script manages ROM files with some tools",
+      "author": "Gabrielpsp",
+      "repo_url": "https://github.com/gabrielpsp/Rom-Inspector-pak",
+      "previous_repo_urls": null,
+      "release_filename": "Rom.Inspector.pak.zip",
+      "changelog": null,
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "ROM Management",
+        "File Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "EDkODyX2KO",
+      "storefront_name": "Cheat Downloader Offline",
+      "name": "Cheat Downloader Offline",
+      "version": "v1.7.0",
+      "type": "TOOL",
+      "description": "A NextUI pak for getting cheats from the Libretro github repo. Needs internet only for the initial database download.",
+      "author": "nborodikhin",
+      "repo_url": "https://github.com/nborodikhin/nextui-cheat-downloader-alt",
+      "previous_repo_urls": null,
+      "release_filename": "CheatDownloaderOffline.pakz",
+      "changelog": {
+        "v1.0.0": "Initial release.",
+        "v1.1.0": "Use zip file for faster cheat extraction time (supportied by packed miniz).",
+        "v1.2.0": "Suppress buttons on downloading screen, restore last position in lists (using unofficial builds of minui-list and minui-presenter).",
+        "v1.3.0": "Use official builds of minui-list and minui-presenter, add tg5050 and my355 support",
+        "v1.4.0": "Sort cheats ignoring case, fix overlapping in list selectors, rewrite app in Nim",
+        "v1.5.0": "Skip empty game directories, improve sorting, put abbreviated tool/region as [AR,US].  Prepopulate game-to-cheat mapping.",
+        "v1.6.0": "Add pre-downloaded file processing (zip file at the root of the SD card).",
+        "v1.7.0": "Add Anbernic H700 support."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040",
+        "tg5050",
+        "my355",
+        "h700"
+      ],
+      "categories": [
+        "ROM Management"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "wL5nJ2cF7z",
+      "storefront_name": "Aesthetics",
+      "name": "Aesthetics",
+      "version": "v1.1.0",
+      "type": "TOOL",
+      "description": "Download, Apply, Clear, and Save Aesthetic Properties: Theme Management with Ultimate Control!",
+      "author": "redria7",
+      "repo_url": "https://github.com/redria7/nextui-aesthetics",
+      "previous_repo_urls": null,
+      "release_filename": "Aesthetics.pak.zip",
+      "changelog": {
+        "v1.0.0": "Aesthetics launch, featuring theme downloads, theme deletion, and wallpaper/icon management",
+        "v1.0.1": "Collection Icon setting support added and reduced (PORTS) png collection (for now)",
+        "v1.1.0": "Bulk Theme Management: Apply, Save, Clear, and Rename entire themes at once!"
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": null,
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Customization"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "HCRwulxl8T",
+      "storefront_name": "Fontleroy",
+      "name": "Fontleroy",
+      "version": "v0.2.0",
+      "type": "TOOL",
+      "description": "Font manager for NextUI. Browse, preview, and install system fonts on TrimUI Brick and Smart Pro.",
+      "author": "Eric Reinsmidt",
+      "repo_url": "https://github.com/ericreinsmidt/nextui-fontleroy",
+      "previous_repo_urls": null,
+      "release_filename": "Fontleroy.tg5040.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release. Browse bundled and user fonts, live preview with sample text, install as system font, backup and restore original.",
+        "v0.2.0": "Add system preview mode with interactive NextUI menu mock, marquee scrolling for long names, and softer specimen background."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": null,
+      "screenshots": [
+        "assets/logo.png",
+        "assets/screenshots/preview.png",
+        "assets/screenshots/installed.png"
+      ],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Customization"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
+    },
+    {
+      "id": "3aNJrBZdif",
+      "storefront_name": "Overlays",
+      "name": "Overlays",
+      "version": "v0.1.1",
+      "type": "TOOL",
+      "description": "Browse, preview and install community emulator overlays from the LoveRetro/nextui-community-overlays repository directly on your handheld. Auto-detects installed emu paks (e.g. MGBA, GAMBATTE, SUPA) and resolution-aware overlay paths.",
+      "author": "zolek86",
+      "repo_url": "https://github.com/zolek86/NextUI-Overlays",
+      "previous_repo_urls": null,
+      "release_filename": "Overlays.pak.zip",
+      "changelog": {
+        "v0.1.0": "Initial release. System browser, fullscreen preview, install with auto-generated .cfg, alias detection (GBA -> MGBA, SFC -> SUPA, etc.), resolution-aware install paths.",
+        "v0.1.1": "Fix release packaging: zip the pak contents directly so the Pak Store no longer creates a nested Overlays.pak/Overlays.pak/ folder on install."
+      },
+      "previous_names": null,
+      "scripts": {
+        "post_install": {
+          "path": "",
+          "args": null
+        },
+        "post_update": {
+          "path": "",
+          "args": null
+        },
+        "post_uninstall": {
+          "path": "",
+          "args": null
+        }
+      },
+      "update_ignore": [],
+      "screenshots": [],
+      "platforms": [
+        "tg5040"
+      ],
+      "categories": [
+        "Miscellaneous Tools"
+      ],
+      "large_pak": false,
+      "disabled": false,
+      "experimental": false
     }
-  ]
+  ],
+  "experimental_paks": []
 }
