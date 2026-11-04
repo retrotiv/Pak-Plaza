@@ -1019,8 +1019,10 @@
       "type": "EMU",
       "description": "Runs mupen64plus in standalone mode for the specified rom",
       "author": "josegonzalez",
-      "repo_url": "https://github.com/josegonzalez/minui-n64-pak",
-      "previous_repo_urls": null,
+      "repo_url": "https://github.com/retrotiv/BrickNEXT",
+      "previous_repo_urls": [
+        "https://github.com/josegonzalez/minui-n64-pak"
+      ],
       "release_filename": "N64.pak.zip",
       "changelog": null,
       "previous_names": null,
@@ -1038,9 +1040,6 @@
           "args": null
         }
       },
-      "update_ignore": [
-        "launch.sh"
-      ],
       "screenshots": null,
       "platforms": [
         "tg5040",
@@ -1063,8 +1062,10 @@
       "type": "EMU",
       "description": "Runs Flycast in standalone mode for the specified rom",
       "author": "josegonzalez",
-      "repo_url": "https://github.com/josegonzalez/minui-dreamcast-pak",
-      "previous_repo_urls": null,
+      "repo_url": "https://github.com/retrotiv/BrickNEXT",
+      "previous_repo_urls": [
+        "https://github.com/josegonzalez/minui-dreamcast-pak"
+      ],
       "release_filename": "DC.pak.zip",
       "changelog": null,
       "previous_names": null,
@@ -1082,9 +1083,6 @@
           "args": null
         }
       },
-      "update_ignore": [
-        "launch.sh"
-      ],
       "screenshots": null,
       "platforms": [
         "tg5040",
@@ -1266,12 +1264,14 @@
       "id": "mL1wS5bV8n",
       "storefront_name": "PPSSPP",
       "name": "PSP",
-      "version": "6.2.0",
+      "version": "6.1.0",
       "type": "EMU",
       "description": "A Emu Pak for PSP, wrapping the standalone PPSSPP emulator.",
       "author": "ben16w",
-      "repo_url": "https://github.com/ben16w/minui-psp",
-      "previous_repo_urls": null,
+      "repo_url": "https://github.com/retrotiv/BrickNEXT",
+      "previous_repo_urls": [
+        "https://github.com/ben16w/minui-psp"
+      ],
       "release_filename": "PSP.pak.zip",
       "changelog": null,
       "previous_names": null,
@@ -1290,7 +1290,8 @@
         }
       },
       "update_ignore": [
-        "launch.sh"
+        "PPSSPP/.config/ppsspp/PSP/SYSTEM/controls.ini",
+        "PPSSPP/.config/ppsspp/PSP/SYSTEM/ppsspp.ini"
       ],
       "screenshots": null,
       "platforms": [
