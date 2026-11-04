@@ -1038,7 +1038,9 @@
           "args": null
         }
       },
-      "update_ignore": null,
+      "update_ignore": [
+        "launch.sh"
+      ],
       "screenshots": null,
       "platforms": [
         "tg5040",
@@ -1080,7 +1082,9 @@
           "args": null
         }
       },
-      "update_ignore": null,
+      "update_ignore": [
+        "launch.sh"
+      ],
       "screenshots": null,
       "platforms": [
         "tg5040",
@@ -1286,8 +1290,7 @@
         }
       },
       "update_ignore": [
-        "PPSSPP/.config/ppsspp/PSP/SYSTEM/controls.ini",
-        "PPSSPP/.config/ppsspp/PSP/SYSTEM/ppsspp.ini"
+        "launch.sh"
       ],
       "screenshots": null,
       "platforms": [
