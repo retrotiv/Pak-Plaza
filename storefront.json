@@ -10,7 +10,7 @@
       "repo_url": "https://github.com/retrotiv/AnberTunes",
       "release_filename": "AnberTunes.pak.zip",
       "version": "v1.0.0",
-      "platforms": ["tg5040", "rg353"],
+      "platforms": ["tg5040", "my355", "rg353"],
       "categories": ["Media"]
     }
   ]
